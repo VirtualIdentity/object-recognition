@@ -1,5 +1,8 @@
 package fr.nimrod.objectrecognition.resources.api;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.nimrod.objectrecognition.resources.api.responses.DetectionResponse;
 import fr.nimrod.objectrecognition.resources.api.responses.StatusResponse;
 import lombok.Getter;
@@ -11,5 +14,15 @@ public class GlobalResponse {
 
    private StatusResponse status;
    
-   private DetectionResponse detections;
+   private List<DetectionResponse> detections;
+   
+   public boolean addDetection(DetectionResponse detection){
+      if(detections == null){
+         detections = new ArrayList<>();
+      }
+      if(!detections.contains(detection)){
+         return detections.add(detection);
+      }
+      return false;
+   }
 }

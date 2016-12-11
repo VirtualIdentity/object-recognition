@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ImageResponse {
+public class CategorieResponse {
 
    private String cat;
 }

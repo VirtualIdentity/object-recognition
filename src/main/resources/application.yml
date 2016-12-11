@@ -1,0 +1,15 @@
+deep:
+  url: http://163.172.48.68:8080
+  service:
+    name: imageserv
+  parameters:
+    input:
+      width: 224
+      height: 224
+    output:
+      best: 3
+    mllib:
+      gpu: false
+  detection:
+    limit: 0.03
+      
